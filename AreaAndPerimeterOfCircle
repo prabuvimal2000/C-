@@ -1,0 +1,29 @@
+#include <iostream>
+class Circle
+{
+	const float pi = 3.14;
+	float radius;
+public:
+	void area(float radius)
+	{
+		this->radius = radius;
+		std::cout << pi * radius * radius<<std::endl;
+	}
+	void perimeter(float radius)
+	{
+		this->radius = radius;
+		std::cout << 2 * pi * radius<<std::endl;
+	}
+};
+int main()
+{
+	float radius;
+	Circle circle;
+	std::cout << "Enter the raiud of the circle: " << std::endl;
+	std::cin >>radius;
+	std::cout << " Area of the circle: " <<std::endl;
+	circle.area(radius);
+	std::cout << " Perimeter of the circle: " << std::endl;
+	circle.perimeter(radius);
+	return 0;
+}
